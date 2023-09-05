@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+
+html, body {
+    color: #191919;
+    font-family: 'inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+header {
+    background-color: #F0EFE9;
+    display: flex;
+    padding: 1rem;
+
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .menu-bars {
+            border: none;
+            background-color: transparent;
+            font-size: 1.8rem;
+
+            @media (min-width: 1200px) {
+                display: none;
+            }
+        }
+
+        .menu-desktop {
+            display: none;
+            margin-left: 4.375rem;
+
+            @media (min-width: 1200px) {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+            }
+
+            .menu-desktop-top {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid #DAD9D3;
+                padding-bottom: 0.2rem;
+
+                .contact-information {
+                    display: flex;
+                    align-items: center;
+
+                    .contact-information-content {
+                        padding-right: 2rem;
+                        margin-right: 2rem;
+                        border-right: 1px solid #DAD9D3;
+
+                        i {
+                            font-size: 1.1rem;
+                            margin-right: .3rem;
+                        }
+
+                        &.last {
+                            border: none;
+                            margin-right: -1rem;
+                            padding-right: none;
+                        }
+                    }
+                }
+
+                .social-media {
+                     a {
+                        color: #191919;
+                        font-size: 1.3rem;
+                        margin-left: 1rem;
+
+                        &:hover {
+                            color: #666666;
+                        }
+                     }
+                }
+            }
+        }
+    }
+}
