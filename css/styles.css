@@ -211,3 +211,24 @@ header .container .menu-desktop .menu-desktop-bottom nav a.active::after, header
     overflow-x: hidden;
   }
 }
+
+.features {
+  display: flex;
+  justify-content: space-between;
+}
+.features .features-content h1 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #F94D1C;
+}
+.features .features-content h2 {
+  font-family: "DM sans", "Inter";
+  font-size: 2.5rem;
+  font-weight: 700;
+  max-width: 460px;
+}
+.features .features-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
