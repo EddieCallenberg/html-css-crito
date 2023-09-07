@@ -219,10 +219,22 @@ header {
         img {
             display: none;
             margin-right: -3.125rem;
+            
 
             @media (min-width: 1200px) {
                 display: block;
             }
         }
+    }
+}
+
+.companies {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    overflow-y: hidden;
+    overflow-x: scroll;
+
+    @media (min-width: 1200px) {
+        overflow-x: hidden;
     }
 }

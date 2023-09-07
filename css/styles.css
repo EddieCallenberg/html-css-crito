@@ -199,3 +199,15 @@ header .container .menu-desktop .menu-desktop-bottom nav a.active::after, header
     display: block;
   }
 }
+
+.companies {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+@media (min-width: 1200px) {
+  .companies {
+    overflow-x: hidden;
+  }
+}
