@@ -70,6 +70,10 @@ html, body {
     background-color: #F0EFE9;
 }
 
+.yellow-background {
+    background-color: #F9D783;
+}
+
 header {
     background-color: #F0EFE9;
     display: flex;
@@ -612,6 +616,7 @@ header {
 
 .project-case-wrapper {
     padding-top: 12rem;
+    padding-bottom: 6rem;
     display: flex;
     flex-direction: column;
     .headings {
@@ -627,6 +632,7 @@ header {
             font-size: 2.8rem;
             font-weight: 700;
             color: #191919;
+            margin-bottom: 4rem;
         }
 
         h4 {
@@ -682,5 +688,149 @@ header {
         display: flex;
         justify-content: center;
         margin-top: 4rem;
+    }
+}
+
+.yellow-background {
+    padding-bottom: 6rem;
+}
+
+.meet-our-team {
+    padding-top: 6rem;
+    h2 {
+        color: #F94D1C;
+        font-size: 1.125rem;
+        font-weight: 700;
+    }
+    .team-members {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+
+        @media(min-width: 992px) {
+            flex-direction: row;           
+        }
+
+        h3{
+            font-size: 2.8rem;
+            font-family: 'DM Sans';
+            font-weight: 700;
+        }
+    }
+    .team-members-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0px;
+        padding-top: 4rem;
+        gap: 1rem;
+
+        @media(min-width: 992px) {
+            grid-template-columns: 1fr 1fr;           
+        }
+
+        @media(min-width: 1400px) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;           
+        }
+
+        .member-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h4 {
+                font-size: 1.375rem;
+                font-family: 'DM Sans';
+                font-weight: 700;
+                text-align: left;
+                margin-top: 1rem;
+            }
+        }
+    }
+    .selection-circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+        div {
+            width: 12px;
+            height: 12px;
+            background-color: #d7c436;
+            border-radius: 1rem;
+            margin: .5rem;
+        }
+
+        .selected {
+            background-color: #191919;
+        }
+    }
+}
+
+.testimonial-wrapper {
+    background-color: #FFF;
+    padding-top: 7.5rem;
+    margin-top: 6rem;
+    h2 {
+        color: #F94D1C;
+        font-size: 1.125rem;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    h3{
+        font-size: 2.8rem;
+        font-family: 'DM Sans';
+        font-weight: 700;
+        text-align: center;
+        margin-top: 1rem;
+        padding-bottom: 4rem;
+    }
+    
+    .reviews-wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        
+        .reviews-card {
+            max-width: 26.25rem;
+            margin: 1rem;
+            
+            i {
+                color: #F94D1C;
+                margin-bottom: 1rem;
+            }
+            p {
+                font-size: 1.125rem;
+                color: #191919;
+                line-height: 34px;
+                font-style: italic;
+            }
+            .customer {
+                display: flex;
+                margin-top: 3rem;
+                img {
+                    width: 70px;
+                    height: 70px;
+                    margin-right: 1rem;
+                }
+                h4 {
+                    font-size: 1.375rem;
+                    font-weight: 700;
+                    font-family: 'DM Sans';
+                }
+                p {
+                    color: #F94D1C;
+
+                }
+            }
+        }
+    }
+    .testimonial-btn {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        display: flex;
+        justify-content: center;
     }
 }
