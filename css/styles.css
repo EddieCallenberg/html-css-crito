@@ -68,6 +68,11 @@ html, body {
   background-color: #F9D783;
 }
 
+.dark-background {
+  background-color: #0E1021;
+  padding-top: 6rem;
+}
+
 header {
   background-color: #F0EFE9;
   display: flex;
@@ -159,6 +164,7 @@ header .container .menu-desktop .menu-desktop-bottom nav a.active::after, header
   bottom: -3px;
   transform: translate(calc(50% - 1rem));
 }
+
 .showcase {
   background-color: #F0EFE9;
 }
@@ -723,11 +729,14 @@ header .container .menu-desktop .menu-desktop-bottom nav a.active::after, header
   margin-top: 1rem;
   padding-bottom: 4rem;
 }
-.testimonial-wrapper .reviews-wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 2rem;
-  padding-right: 2rem;
+@media (min-width: 992px) {
+  .testimonial-wrapper .reviews-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    overflow: hidden;
+  }
 }
 .testimonial-wrapper .reviews-wrapper .reviews-card {
   max-width: 26.25rem;
@@ -765,4 +774,193 @@ header .container .menu-desktop .menu-desktop-bottom nav a.active::after, header
   padding-bottom: 4rem;
   display: flex;
   justify-content: center;
+}
+
+.blog-section {
+  padding-top: 6rem;
+}
+.blog-section h2 {
+  color: #F94D1C;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.blog-section .hthree-and-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+@media (min-width: 992px) {
+  .blog-section .hthree-and-btn {
+    flex-direction: row;
+  }
+}
+.blog-section .hthree-and-btn h3 {
+  font-size: 2.8rem;
+  font-family: "DM Sans";
+  font-weight: 700;
+}
+.blog-section .article-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  .blog-section .article-cards {
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1400px) {
+  .blog-section .article-cards {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+}
+.blog-section .article-cards .article-wrapper {
+  max-width: 420px;
+  height: 395px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.blog-section .article-cards .article-wrapper .background-img {
+  display: none;
+}
+@media (min-width: 576px) {
+  .blog-section .article-cards .article-wrapper .background-img {
+    display: block;
+    position: relative;
+  }
+}
+.blog-section .article-cards .article-wrapper .background-img .date {
+  position: absolute;
+  background-color: #f7cc5e;
+  width: 56px;
+  height: 64px;
+  text-align: center;
+  margin: 1rem;
+  top: 0;
+}
+.blog-section .article-cards .article-wrapper .background-img .date .date-nr {
+  font-family: "DM Sans";
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin-bottom: -2px;
+  margin-top: 3px;
+}
+.blog-section .article-cards .article-wrapper .article-category .article-text {
+  margin-top: 1rem;
+  color: #6a6c71;
+}
+.blog-section .article-cards .article-wrapper .article-title {
+  font-family: "DM Sans";
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+
+.newsletter-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem 0;
+}
+@media (min-width: 1400px) {
+  .newsletter-wrapper {
+    flex-direction: row;
+  }
+}
+.newsletter-wrapper h2 {
+  font-family: "DM Sans";
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .newsletter-wrapper h2 {
+    text-align: left;
+  }
+}
+.newsletter-wrapper .mail-and-btn {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 576px) {
+  .newsletter-wrapper .mail-and-btn {
+    flex-direction: row;
+  }
+  .newsletter-wrapper .mail-and-btn a {
+    text-align: center;
+  }
+}
+.newsletter-wrapper .mail-and-btn input {
+  color: #6a6c71;
+  height: 3rem;
+  padding-left: 1rem;
+  border-radius: 10rem;
+  border: none;
+  margin-right: 0.5rem;
+}
+.newsletter-wrapper .mail-and-btn a {
+  text-align: center;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .footer-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    gap: 1rem;
+  }
+}
+.footer-wrapper .crito-info {
+  max-width: 311px;
+}
+.footer-wrapper .crito-info p {
+  color: #6a6c71;
+  margin-top: 1rem;
+}
+.footer-wrapper .company-footer, .footer-wrapper .help-footer, .footer-wrapper .resources-footer, .footer-wrapper .links-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 2rem;
+}
+.footer-wrapper .company-footer h2, .footer-wrapper .help-footer h2, .footer-wrapper .resources-footer h2, .footer-wrapper .links-footer h2 {
+  font-family: "DM Sans";
+  font-size: 1.375;
+  font-weight: 700;
+  color: #FFF;
+}
+.footer-wrapper .company-footer a, .footer-wrapper .help-footer a, .footer-wrapper .resources-footer a, .footer-wrapper .links-footer a {
+  text-decoration: none;
+  color: #6a6c71;
+  margin-top: 1rem;
+}
+.footer-wrapper .company-footer a:hover, .footer-wrapper .help-footer a:hover, .footer-wrapper .resources-footer a:hover, .footer-wrapper .links-footer a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.footer-wrapper-two {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 4rem;
+  color: #FFF;
+}
+.footer-wrapper-two a {
+  color: #FFF;
 }

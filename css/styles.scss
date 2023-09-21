@@ -74,6 +74,11 @@ html, body {
     background-color: #F9D783;
 }
 
+.dark-background {
+    background-color: #0E1021;
+    padding-top: 6rem;
+}
+
 header {
     background-color: #F0EFE9;
     display: flex;
@@ -180,11 +185,6 @@ header {
 
                     }
                 }
-
-                .login-btn {
-
-                }
-
             }
         }
     }
@@ -788,10 +788,14 @@ header {
     }
     
     .reviews-wrapper {
-        display: flex;
-        justify-content: space-between;
-        padding-left: 2rem;
-        padding-right: 2rem;
+
+        @media(min-width: 992px) {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            overflow: hidden;
+        }
         
         .reviews-card {
             max-width: 26.25rem;
@@ -832,5 +836,179 @@ header {
         padding-bottom: 4rem;
         display: flex;
         justify-content: center;
+    }
+}
+
+.blog-section {
+    padding-top: 6rem;
+    h2 {
+        color: #F94D1C;
+        font-size: 1.125rem;
+        font-weight: 700;
+    }
+    .hthree-and-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        @media(min-width: 992px) {
+            flex-direction: row;
+        }
+       h3 {
+        font-size: 2.8rem;
+        font-family: 'DM Sans';
+        font-weight: 700;
+       } 
+    }
+    .article-cards {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        @media(min-width: 1200px) {
+            overflow-x: scroll;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @media(min-width: 1400px) {
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+        .article-wrapper {
+            max-width: 420px;
+            height: 395px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .background-img {
+                display: none;
+                @media(min-width: 576px) {
+                    display: block;
+                    position: relative;
+                }
+                .date {
+                    position: absolute;
+                    background-color: #f7cc5e;
+                    width: 56px;
+                    height: 64px;
+                    text-align: center;
+                    margin: 1rem;
+                    top: 0;
+                    .date-nr {
+                        font-family: 'DM Sans';
+                        font-size: 1.375rem;
+                        font-weight: 700;
+                        margin-bottom: -2px;
+                        margin-top: 3px;
+                    }
+                }
+            }
+           .article-category .article-text {
+            margin-top: 1rem;
+            color: #6a6c71;
+           }
+           .article-title {
+            font-family: 'DM Sans';
+            font-size: 1.375rem;
+            font-weight: 700;
+           }
+        }
+    }
+}
+
+.newsletter-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem 0;
+    @media(min-width: 1400px) {
+        flex-direction: row;
+    }
+    h2 {
+        font-family: 'DM Sans';
+        font-size: 2.8rem;
+        font-weight: 700;
+        text-align: center;
+        @media(min-width: 992px) {
+            text-align: left;
+        }
+    }
+    .mail-and-btn {
+        display: flex;
+        flex-direction: column;
+        @media(min-width: 576px) {
+            flex-direction: row;
+            a {
+                text-align: center;
+            }
+        }
+        input {
+            color: #6a6c71;
+            height: 3rem;
+            padding-left: 1rem;
+            border-radius: 10rem;
+            border: none;
+            margin-right: .5rem;
+          }
+          a {
+            text-align: center;
+        }
+    }
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media(min-width: 992px) {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr;
+        gap: 1rem;
+    }
+    .crito-info {
+        max-width: 311px;
+        p {
+            color: #6a6c71;
+            margin-top: 1rem;
+        }
+    }
+    .company-footer, .help-footer, .resources-footer, .links-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-top: 2rem;
+        h2 {
+            font-family: 'DM Sans';
+            font-size: 1.375;
+            font-weight: 700;
+            color: #FFF;
+        }
+        a {
+            text-decoration: none;
+            color: #6a6c71;
+            margin-top: 1rem;
+            &:hover {
+                text-decoration: underline;
+                color: #fff;
+            }
+        }
+    }
+}
+.footer-wrapper-two {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 4rem;  
+    color: #FFF;
+    a {
+        color: #FFF;
     }
 }
