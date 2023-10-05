@@ -20,6 +20,7 @@ html, body {
     padding: .8rem 1.6rem;
     font-weight: 600;
     border-radius: 10rem;
+    transition: 0.4s;
 
     i {
         margin-left: .5rem;
@@ -41,6 +42,7 @@ html, body {
     font-weight: 600;
     border-radius: 10rem;
     text-align: center;
+    transition: 0.4s;
 
     i {
         margin-left: .5rem;
@@ -61,6 +63,7 @@ html, body {
     padding: .75rem 1.6rem;
     font-weight: 600;
     border-radius: 10rem;
+    transition: 0.4s;
 
     i {
         margin-left: .5rem;
@@ -150,9 +153,10 @@ header {
                         color: #191919;
                         font-size: 1.3rem;
                         margin-left: 1rem;
+                        transition: 0.2s;
 
                         &:hover {
-                            color: #747373;
+                            color: #f7cc5e;
                         }
                      }
                 }
@@ -201,7 +205,7 @@ header {
     position: relative;
     .container {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         .content {
             padding: 2rem 0;
@@ -217,7 +221,7 @@ header {
                 font-weight: 700;
                 
                 @media (min-width: 768px) {
-                    font-size: 4.375rem;
+                    font-size: 2rem;
                 }
 
                 @media (min-width: 1200px) {
@@ -307,14 +311,14 @@ header {
         align-items: center;
         text-align: center;
         
-        h1 {
+        h2 {
             font-size: 1.1rem;
             font-weight: 500;
             color: #F94D1C;
             margin-bottom: 1rem;
         }
 
-        h2 {
+        h3 {
             font-family: 'DM sans', 'Inter';
             font-size: 2.5rem;
             font-weight: 700;
@@ -336,7 +340,7 @@ header {
             margin-bottom: 2rem;
         }
 
-        h3 {
+        h4 {
             font-family: 'DM Sans', 'Inter';
             font-weight: 700;
             font-size: 1.25rem;
@@ -377,6 +381,12 @@ header {
             position: relative;
             margin-left: 3rem;
             padding-right: 3rem;
+
+            .csm-elm {
+                position: absolute;
+                top: 2rem;
+                left: -3rem;
+            }
 
             .img-quote {
                 width: 368px;
@@ -517,6 +527,7 @@ header {
                 min-width: 14rem;
                 height: 20rem;
                 background-color: #FFFFFF;
+                transition: 0.3s;
     
                  hr {
                     width: 2rem;
@@ -1090,6 +1101,7 @@ footer {
     .footer-cosmetic {
         display: none;
         overflow: hidden;
+        pointer-events: none;
         @media(min-width: 1000px) {
             display: block;
             position: absolute;
@@ -1144,14 +1156,31 @@ footer {
 }
 .contact-contact-info {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
     padding-top: 4rem;
     padding-bottom: 3rem;
+    @media(min-width: 1200px) {
+        flex-direction: row;
+    }
     .contact-card {
         border: 1px solid #6a6c71;
+        max-width: 400px;
+        max-height: 220px;
+        height: 100%;
+        width: 100%;
+        padding: 3rem;
+        margin: 1rem;
+        flex-shrink: 1;
         .contact-card-top {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
+            h2 {
+                font-family: 'DM Sans';
+                font-weight: 700;
+                font-size: 1.375rem;
+                margin-left: 1rem;
+            }
             .icon-container {
                 display: flex;
                 align-items: center;
@@ -1166,7 +1195,54 @@ footer {
                     font-size: 1.5rem;
                 }
             }
-            
+        }
+        .contact-card-bottom {
+            p {
+                font-size: 1.125rem;
+                color: #6a6c71;
+                margin-left: 76px;
+            }
         }
     }
+}
+.feedback-form-section-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    margin-bottom: 4rem;
+    h2 {
+        font-family: 'DM Sans';
+        font-weight: 700;
+        font-size: 2.8rem;
+        text-align: center;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        input {
+            border: none;
+            border-radius: 2rem;
+            padding-left: 1.5rem;
+            margin-top: 1rem;
+        }
+        #cf-name, #cf-email, #cf-message {
+            height: 2rem;
+        }
+        #cf-message {
+            height: 150px;
+            resize: none;
+            border-radius: 2rem;
+            padding-top: .5rem;
+            padding-left: 1.5rem;
+            margin-top: 1rem;
+            border: none;
+        }
+    }
+}
+.contact-map {
+    background-image: url("/images/crito-contact-map.png");
+    height: 620px;
+    background-position: center;
+    background-size: cover;
 }
