@@ -695,8 +695,12 @@ header {
 
         .projects-card {
             width: 100%;
+            border: 1px solid #6a6c71;
+            margin-top: 1rem;
             @media(min-width: 768px) {
+                border: none;
                 width: auto;
+                margin-top: 0px;
             }
             img {
                 display: none;

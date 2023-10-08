@@ -649,10 +649,14 @@ header .container .menu-desktop .menu-desktop-bottom nav a.active::after, header
 }
 .project-case-wrapper .projects-cards-wrapper .projects-card {
   width: 100%;
+  border: 1px solid #6a6c71;
+  margin-top: 1rem;
 }
 @media (min-width: 768px) {
   .project-case-wrapper .projects-cards-wrapper .projects-card {
+    border: none;
     width: auto;
+    margin-top: 0px;
   }
 }
 .project-case-wrapper .projects-cards-wrapper .projects-card img {
